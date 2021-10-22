@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-8 offset-sm-2">
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">VISION</h1>
+      <p class="lead">Upload your images here. Vision will identify the objects present inside the image. <br>
+        <!-- <a href="https://github.com/imadtoubal/Pytorch-Flask-Docker-App"> View on GitHub</a> -->
+      </p>
+    </div>
+  </div>
+</div>
+  <div class="container mt-3 mb-3 w-100" style = "padding-bottom: 20px;">
+	  <div class="card shadow-lg w-100">
+		  <div class="card-header d-flex justify-content-center">
+			  <!-- <h4>Image Uploading</h4> -->
+			  <form class="form" action="#" method="post" id="form">
+					<input type="file" name="Image" id="image" multiple="" class="d-none" onchange="image_select()">
+					<button class="btn btn-sm btn-primary mr-3" type="button" onclick="document.getElementById('image').click()">Choose Images</button>
+			  </form>
+        <form class="form">
+					<button class="btn btn-sm btn-primary ml-3"  id = "upload" type="button">Upload Images</button>
+			  </form>
+		  </div>
+      <div class="container-fluid mt-3 mb-3">
+        <div class="card-deck justify-content-center" id="container">
+          <!-- image preview -->
+        </div>
+      </div>
+	</div>
+</div>
+  <div class = "container mt-3 mb-3 w-100" >
+    <div class="container-fluid mt-3 mb-3">
+      <div class="card shadow-lg w-100" id = "result_container">
+        <!-- resutl container -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
